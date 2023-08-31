@@ -19,6 +19,12 @@ const Header = () => {
             <li>
               <Link to="/cart">Shopping Cart</Link>
             </li>
+            <li className="link-form">
+              <Link to="/register">Register</Link>
+            </li>
+            <li className="link-form">
+              <Link to="/login">LogIn</Link>
+            </li>
           </FlexWrap>
           <div>
             <ButtonCart />
