@@ -1,5 +1,6 @@
 import { Typography } from "@mui/material";
 import { useForm } from "react-hook-form";
+import Copyright from "../Copyright/Copyright";
 import InputField from "../UI/FormFields/InputFields";
 
 const RegisterForm = () => {
@@ -25,6 +26,7 @@ const RegisterForm = () => {
         <InputField control={control} name="name" label="Name" />
         <InputField control={control} name="email" label="E-mail" />
       </form>
+      <Copyright/>
     </>
   );
 };
