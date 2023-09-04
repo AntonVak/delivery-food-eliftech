@@ -1,11 +1,15 @@
-import { Container } from "react-bootstrap";
+
+import LoginForm from "../../components/LogInForm/LogInForm";
+import SignUp from "../../components/LogInForm/SignUp";
+import MainContainer from "../../shared/style/MainContainer";
 
 
 const LogInPage = () => {
     return ( 
-        <Container>
-            
-        </Container>
+        <MainContainer>
+           <LoginForm/>
+           <SignUp/>
+        </MainContainer>
      );
 }
  

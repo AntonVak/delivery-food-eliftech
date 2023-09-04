@@ -1,13 +1,16 @@
-import { Typography } from "@mui/material";
+import { Avatar, Button, Box, Typography } from "@mui/material";
 import { useForm } from "react-hook-form";
+import Copyright from "../Copyright/Copyright";
 import InputField from "../UI/FormFields/InputFields";
+import LockPersonIcon from "@mui/icons-material/LockPerson";
+import { FlexDiv } from "../../shared/style/GlobalStyles";
+import { styles } from "./LoginFormStayle";
 
-const RegisterForm = () => {
+const LoginForm = () => {
   const { handleSubmit, reset, control } = useForm({
     defaultValues: {
       firstName: "",
       email: "",
-      password: "",
     },
     mode: "onTouched",
   });
@@ -17,15 +20,23 @@ const RegisterForm = () => {
     // reset();
   };
   return (
-    <>
+    <FlexDiv>
+      <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+        <LockPersonIcon />
+      </Avatar>
       <Typography variant="h4" component="h2" mt={2}>
-        Register form
+        Login form
       </Typography>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <Box component="form"  sx={styles.form} onSubmit={handleSubmit(onSubmit)}>
         <InputField control={control} name="name" label="Name" />
-      </form>
-    </>
+        <InputField control={control} name="email" label="E-mail" />
+        <Button className={styles.button} type="submit" variant="contained" fullWidth>
+          Register
+        </Button>
+      </Box>
+      <Copyright />
+    </FlexDiv>
   );
 };
 
-export default RegisterForm;
+export default LoginForm;
