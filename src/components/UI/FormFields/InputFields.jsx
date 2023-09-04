@@ -18,6 +18,7 @@ const InputField = ({ label, name, control, type }) => {
         onChange={onChange}
         ref={ref}
         type={type}
+        fullWidth
       />
       {invalid && <p>{error?.message}</p>}
     </>

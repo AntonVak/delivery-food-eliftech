@@ -116,5 +116,12 @@ export const FlexWrap = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
+export const FlexDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+`;
 
 

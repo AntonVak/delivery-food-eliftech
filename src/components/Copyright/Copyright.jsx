@@ -3,9 +3,9 @@ import { Link, Typography } from "@mui/material";
 
 const Copyright = () => {
   return (
-    <Typography variant="body2" color="text.error" align="center">
+    <Typography variant="body2" color="text.secondary" align="center">
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="text.primary" href="https://mui.com/">
         Your Website
       </Link>{" "}
       {new Date().getFullYear()}
