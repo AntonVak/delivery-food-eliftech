@@ -9,8 +9,8 @@ import { styles } from "./LoginFormStayle";
 const LoginForm = () => {
   const { handleSubmit, reset, control } = useForm({
     defaultValues: {
-      firstName: "",
-      email: "",
+      name: "",
+      password: "",
     },
     mode: "onTouched",
   });
@@ -29,7 +29,7 @@ const LoginForm = () => {
       </Typography>
       <Box component="form"  sx={styles.form} onSubmit={handleSubmit(onSubmit)}>
         <InputField control={control} name="name" label="Name" />
-        <InputField control={control} name="email" label="E-mail" />
+        <InputField control={control} name="password" label="Password" type="password"/>
         <Button className={styles.button} type="submit" variant="contained" fullWidth>
           Register
         </Button>

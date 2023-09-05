@@ -14,13 +14,14 @@ const InputField = ({ label, name, control, type }) => {
       <TextField
         id="outlined-basic"
         label={label}
-        onBlur={onBlur}
-        onChange={onChange}
-        ref={ref}
+        // onBlur={onBlur}
+        // onChange={onChange}
+        // ref={ref}
         type={type}
         fullWidth
+        size="small"
       />
-      {invalid && <p>{error?.message}</p>}
+      {/* {invalid && <p>{error?.message}</p>} */}
     </>
   );
 };
