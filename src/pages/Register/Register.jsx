@@ -1,21 +1,14 @@
 import RegisterForm from "../../components/RegisterForm/RegisterForm";
-import { Container } from "../../shared/constants/GlobalStyles";
-import { ContainerFlex, FlexDirec, SectionStyl } from "./RegisterPage.styled";
-import LockPersonIcon from "@mui/icons-material/LockPerson";
-import { Avatar } from "@mui/material";
+import { FlexDirec } from "./RegisterPage.styled";
+import MainContainer from "../../shared/style/MainContainer";
 
 const RegisterPage = () => {
   return (
-    <SectionStyl>
-      <ContainerFlex>
-        <FlexDirec>
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockPersonIcon />
-          </Avatar>
-          <RegisterForm />
-        </FlexDirec>
-      </ContainerFlex>
-    </SectionStyl>
+    <MainContainer>
+      <FlexDirec>
+        <RegisterForm />
+      </FlexDirec>
+    </MainContainer>
   );
 };
 

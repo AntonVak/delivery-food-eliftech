@@ -10,8 +10,8 @@ export const ContainerFlex = styled.div`
   justify-content: center;
 `;
 export const FlexDirec = styled.div`
-display: flex;
+  display: flex;
   flex-direction: column;
-  
+  gap: 1rem;
   align-items: center;
 `;
