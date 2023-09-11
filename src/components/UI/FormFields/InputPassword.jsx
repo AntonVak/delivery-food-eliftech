@@ -10,7 +10,7 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import { useState } from "react";
 import { useController } from "react-hook-form";
 
-const InputPassword = ({ label, name, control, type }) => {
+const InputPassword = ({ label, name, control, type, autoComplete }) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -33,6 +33,9 @@ const InputPassword = ({ label, name, control, type }) => {
       <OutlinedInput
         id="outlined-adornment-password"
         type={showPassword ? "text" : "password"}
+        autoComplete={autoComplete}
+        onBlur={onBlur}
+        onChange={onChange}
         endAdornment={
           <InputAdornment position="end">
             <IconButton
@@ -47,7 +50,7 @@ const InputPassword = ({ label, name, control, type }) => {
         }
         label="Password"
       />
-      {invalid && <p>{error?.message}</p>}
+      {invalid && <p sx={{color: "#33355"}}>{error?.message}</p>}
     </FormControl>
   );
 };

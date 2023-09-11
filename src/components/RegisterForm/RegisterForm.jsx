@@ -40,6 +40,7 @@ const RegisterForm = () => {
           name="password"
           label="Password"
           type="password"
+          autoComplete="new-password"
         />
         <Button type="submit" fullWidth variant="contained">
           Register

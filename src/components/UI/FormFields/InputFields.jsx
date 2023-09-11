@@ -1,5 +1,6 @@
 import { useController } from "react-hook-form";
 import { TextField } from "@mui/material";
+import { styles } from "./FormFieldStyle";
 
 const InputField = ({ label, name, control, type }) => {
   const {
@@ -12,16 +13,16 @@ const InputField = ({ label, name, control, type }) => {
   return (
     <>
       <TextField
-        id="outlined-basic"
+        id={label}
         label={label}
-        // onBlur={onBlur}
-        // onChange={onChange}
-        // ref={ref}
+        onBlur={onBlur}
+        onChange={onChange}
+        ref={ref}
         type={type}
         fullWidth
         size="small"
       />
-      {/* {invalid && <p>{error?.message}</p>} */}
+      {invalid && <p sx={styles.p}>{error?.message}</p>}
     </>
   );
 };
